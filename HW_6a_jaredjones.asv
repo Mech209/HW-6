@@ -32,7 +32,7 @@ u = reshape(u, 9,9);
 %Exact
 u_exact = zeros();
 for i = 1:N-1
-    x = i*h;
+    x=i*h;
     for j = 1:N-1
         y = j*h;
       u_exact(i,j) = (L-y)*sin(M*x)*sinh(M*y);
@@ -42,12 +42,7 @@ end
 %L1 error
 err = u_exact - u;
 
-%Plot u at a few y values
+%Plot x at a few y values
 hold on
-plot()
+plot(u,L/4)
 plot(u,L/2)
-plot(u,3*L/4)
-%Plot u at a few x values
-plot(L/4,u)
-plot(L/2,u)
-plot(3*L/4, u)
